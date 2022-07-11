@@ -1,12 +1,5 @@
 domain: bigbang.dev
 
-# Uncomment the following settings if using the AWS RKE2 terraform setup
-# istio:
-#   ingressGateways:
-#     public-ingressgateway:
-#       type: "NodePort"
-#       nodePortBase: 30000
-
 flux:
   interval: 1m
   rollback:
@@ -47,6 +40,9 @@ monitoring:
           requests:
             cpu: 200m
             memory: 1Gi
+    kubeStateMetrics:
+        serviceMonitor:
+          honorLabels: true
 
 fluentbit:
   values:
@@ -72,8 +68,12 @@ kyverno:
     replicaCount: 1
 
 twistlock:
-  enabled: false
+  # tim - i turned this on for giggles
+  enabled: true
   values:
     console:
       persistence:
         size: 256Mi
+
+istio:
+  enabled: true
