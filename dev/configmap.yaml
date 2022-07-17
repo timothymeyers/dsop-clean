@@ -40,6 +40,9 @@ monitoring:
           requests:
             cpu: 200m
             memory: 1Gi
+    kubeStateMetrics:
+      serviceMonitor:
+        honorLabels: true
 
 fluentbit:
   values:
@@ -65,8 +68,12 @@ kyverno:
     replicaCount: 1
 
 twistlock:
-  enabled: false
+  # tim - i turned this on for giggles
+  enabled: true
   values:
     console:
       persistence:
         size: 256Mi
+
+istio:
+  enabled: true
