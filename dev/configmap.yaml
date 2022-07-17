@@ -41,6 +41,10 @@ monitoring:
             cpu: 200m
             memory: 1Gi
 
+    kubeStateMetrics:
+        serviceMonitor:
+          honorLabels: true
+
 fluentbit:
   values:
     securityContext:
