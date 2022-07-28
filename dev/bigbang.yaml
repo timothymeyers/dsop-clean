@@ -10,9 +10,9 @@ metadata:
   namespace: bigbang
 spec:
   interval: 1m
-  url: https://replace-with-your-git-repo.git
+  url: https://github.com/timothymeyers/dsop-clean
   ref:
-    branch: replace-with-your-branch
+    branch: ci-dsop-rke2_AzurePublicCloud_eastus2_Standard_D8_v3_1-596
   secretRef:
     name: private-git
 ---
