@@ -12,7 +12,7 @@ spec:
   interval: 1m
   url: https://github.com/timothymeyers/dsop-clean
   ref:
-    branch: 1.43.0-1.13.1-test
+    branch: 1.43.0-1.13.1-test-tf
   secretRef:
     name: private-git
 ---
