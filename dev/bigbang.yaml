@@ -10,9 +10,9 @@ metadata:
   namespace: bigbang
 spec:
   interval: 1m
-  url: https://replace-with-your-git-repo.git
+  url: https://github.com/timothymeyers/dsop-clean
   ref:
-    branch: replace-with-your-branch
+    branch: 1.41.0-1.13.1-test-1
   secretRef:
     name: private-git
 ---
